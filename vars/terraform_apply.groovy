@@ -22,7 +22,7 @@ node {
 //      }
     
     stage('Terraform apply') {
-       sh 'terraform apply plan.json'
+       sh 'terraform apply plan.out'
     }
 }
 }
