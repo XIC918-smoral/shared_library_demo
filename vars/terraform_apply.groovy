@@ -11,7 +11,7 @@ node {
 //     }
         
         stage('copy'){
-       copyArtifacts filter: 'plan.json', fingerprintArtifacts: true, projectName: 'terraform', selector: workspace()
+       copyArtifacts filter: '/plan.json', fingerprintArtifacts: true, projectName: 'terraform', selector: workspace()
         }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
