@@ -11,7 +11,7 @@ node {
 //     }
         
         stage('copy'){
-        copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: lastSuccessful()
+        copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: upstream(fallbackToLastSuccessful: true)
         }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
