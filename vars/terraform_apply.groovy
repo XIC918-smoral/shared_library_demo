@@ -11,7 +11,7 @@ node {
 //     }
         
         stage('copy'){
-       copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: workspace()
+       copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: specific('${DEPLOY_BUILD_NUMBER}')
         }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
