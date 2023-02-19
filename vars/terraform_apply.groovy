@@ -10,8 +10,9 @@ node {
 //        sh 'terraform init'
 //     }
         
-     stage('copy')
+        stage('copy'){
         copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: lastSuccessful()
+        }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
 //                 script {
