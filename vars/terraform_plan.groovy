@@ -49,7 +49,7 @@ node {
     }
     
     stage('archive'){
-        archiveArtifacts artifacts: 'plan.json', followSymlinks: false
+        archiveArtifacts artifacts: 'plan.out', followSymlinks: false
     }
     
     
