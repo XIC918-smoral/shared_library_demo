@@ -10,9 +10,8 @@ node {
 //        sh 'terraform init'
 //     }
         
-        step ([$class: ' CopyArtifact',
-            projectName: ' terraform']);
-  //       filter: 'target/orders.war']);
+     stage('copy')
+        copyArtifacts fingerprintArtifacts: true, projectName: 'terraform', selector: lastSuccessful()
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
 //                 script {
