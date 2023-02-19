@@ -48,6 +48,10 @@ node {
         sh 'terraform show -json plan.out | jq > plan.json'
     }
     
+    stage('archive'){
+        archiveArtifacts artifacts: '', followSymlinks: false
+    }
+    
     
     
     
