@@ -5,6 +5,8 @@ node {
 //         git branch: 'main', url: 'https://github.com/XIC918-smoral/ec2.git'
         
 //     }
+        stage('delete'){
+                sh 'rm plan.out'
     
 //     stage('Terraform init') {
 //        sh 'terraform init'
