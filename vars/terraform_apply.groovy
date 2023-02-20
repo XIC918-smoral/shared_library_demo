@@ -6,7 +6,7 @@ node {
         
 //     }
         stage('delete'){
-                sh 'rm -rf .'
+                sh 'rm -rf *'
         }
     
 //     stage('Terraform init') {
