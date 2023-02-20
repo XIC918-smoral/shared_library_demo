@@ -13,7 +13,7 @@ node {
 //        sh 'terraform init'
 //     }
         stage('cd'){
-                sh 'cd ${BUILD_NUMBER}'
+                sh 'cd terraform-${BUILD_NUMBER}'
         }
         
         stage('copy'){
