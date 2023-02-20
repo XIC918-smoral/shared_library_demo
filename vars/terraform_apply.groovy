@@ -6,16 +6,16 @@ node {
         
 //     }
         stage('delete'){
-                sh 'rm plan.out'
+                sh 'rm -rf .'
         }
     
 //     stage('Terraform init') {
 //        sh 'terraform init'
 //     }
         
-//         stage('copy'){
-//        copyArtifacts filter: '**', fingerprintArtifacts: true, includeBuildNumberInTargetPath: true, projectName: 'terraform', selector: workspace()
-//         }
+        stage('copy'){
+       copyArtifacts filter: '**', fingerprintArtifacts: true, includeBuildNumberInTargetPath: true, projectName: 'terraform', selector: workspace()
+        }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
 //                 script {
