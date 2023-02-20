@@ -7,6 +7,7 @@ node {
 //     }
         stage('delete'){
                 sh 'rm plan.out'
+        }
     
 //     stage('Terraform init') {
 //        sh 'terraform init'
