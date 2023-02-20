@@ -10,7 +10,7 @@ node {
     }
 //     stage('tflint'){
 //     echo "=========================Executing linting for Terraform files============================"
-//     sh  'sudo docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint'
+//     sh  'sudo docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint > tflint'
    
 //     }
     
@@ -24,7 +24,7 @@ node {
     
     // stage('tfsec'){
     // echo "=========================Executing code compliance for Terraform files============================"
-    // sh  'sudo docker run --rm -v "$(pwd):/src" aquasec/tfsec /src'
+    // sh  'sudo docker run --rm -v "$(pwd):/src" aquasec/tfsec /src >tfsec'
    
     // }
    
