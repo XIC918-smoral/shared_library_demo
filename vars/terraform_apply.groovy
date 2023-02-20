@@ -12,6 +12,9 @@ node {
 //     stage('Terraform init') {
 //        sh 'terraform init'
 //     }
+        stage('cd'){
+                sh 'cd ${BUILD_NUMBER}'
+        }
         
         stage('copy'){
        copyArtifacts filter: '**', fingerprintArtifacts: true, includeBuildNumberInTargetPath: true, projectName: 'terraform', selector: workspace()
