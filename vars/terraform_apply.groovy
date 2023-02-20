@@ -12,13 +12,13 @@ node {
 //     stage('Terraform init') {
 //        sh 'terraform init'
 //     }
-        stage('cd'){
-                sh 'cd terraform-${BUILD_NUMBER}'
-        }
+//         stage('cd'){
+//                 sh 'cd terraform-${BUILD_NUMBER}'
+//         }
         
-        stage('copy'){
-       copyArtifacts filter: '**', fingerprintArtifacts: true, includeBuildNumberInTargetPath: true, projectName: 'terraform', selector: workspace()
-        }
+//         stage('copy'){
+//        copyArtifacts filter: '**', fingerprintArtifacts: true, includeBuildNumberInTargetPath: true, projectName: 'terraform', selector: workspace()
+//         }
 //      stage('Approval') {
 //             // no agent, so executors are not used up when waiting for approvals
 //                 script {
