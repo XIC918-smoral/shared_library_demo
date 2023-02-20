@@ -14,11 +14,11 @@ node {
    
 //     }
     
-//     stage('checov'){
-//     echo "=========================Executing checkov for Terraform files============================"
-//     sh  'sudo docker pull bridgecrew/checkov'
-//     sh 'sudo docker run --rm --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf'
-//     }
+    stage('checov'){
+    echo "=========================Executing checkov for Terraform files============================"
+    sh  'sudo docker pull bridgecrew/checkov'
+    sh 'sudo docker run --rm --volume $(pwd):/tf --workdir /tf bridgecrew/checkov --directory /tf > checkov'
+    }
     
     
     
