@@ -1,5 +1,0 @@
-@Library('pipleine-library-demo')_
-
- stage('Demo') {
-     nodejs()
- }
